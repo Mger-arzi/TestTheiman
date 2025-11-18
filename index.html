@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рулетка подарков THEIMAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+    <div class="container">
+        <div class="wheel-container">
+            <div class="wheel-wrapper">
+                <div class="pointer"></div>
+                <div class="wheel" id="wheel">
+                    <span class="wheel-center">THEIMAN</span>
+                </div>
+            </div>
+            <button class="spin-button" id="spinBtn">Крутить рулетку</button>
+            <div class="result" id="result">Ваш подарок: <span id="prizeText">-</span></div>
+        </div>
+        <div class="info">
+            <div class="tag">Подарочная механика</div>
+            <h1>Рулетка подарков THEIMAN</h1>
+            <p>Увеличенная рулетка + увеличенный блок. Теперь всё выглядит масштабнее и премиальнее.</p>
+            <div class="prizes">
+                <div class="prizes-title">Подарки (12 шт.)</div>
+                <div class="prizes-list">
+                    <div class="prize-item"><span class="prize-number">1.</span> Сертификат на 1 000 ₽</div>
+                    <div class="prize-item"><span class="prize-number">2.</span> Сертификат на 2 000 ₽</div>
+                    <div class="prize-item"><span class="prize-number">3.</span> Сертификат на 3 000 ₽</div>
+                    <div class="prize-item"><span class="prize-number">4.</span> Сертификат на 5 000 ₽</div>
+                    <div class="prize-item"><span class="prize-number">5.</span> Чехол для iPhone</div>
+                    <div class="prize-item"><span class="prize-number">6.</span> Беспроводная зарядка</div>
+                    <div class="prize-item"><span class="prize-number">7.</span> Защитное стекло</div>
+                    <div class="prize-item"><span class="prize-number">8.</span> Кабель USB-C / Lightning</div>
+                    <div class="prize-item"><span class="prize-number">9.</span> Фирменный шопер</div>
+                    <div class="prize-item"><span class="prize-number">10.</span> Скидка 10%</div>
+                    <div class="prize-item"><span class="prize-number">11.</span> Скидка 15%</div>
+                    <div class="prize-item"><span class="prize-number">12.</span> Перенос данных</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Попап -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-title">🎉 Поздравляем!</div>
+            <p>Вы выиграли:</p>
+            <div class="modal-prize" id="modalPrize">Сертификат на 5 000 ₽</div>
+            <button class="close-btn" id="closeModal">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

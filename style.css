@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #242735 0, #05060a 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.main {
+    /* height: 100vh; */
+    /* background: rgb(20, 202, 20); */
+    font-family: 'Times New Roman - 400, sans-serif';
+    color: #ccc;
+    padding: 20px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background:#716d6d1a;
+    border-radius: 16px;
+    padding: 30px;
+    /* max-width: 900px; */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.wheel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.wheel-wrapper {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* box-shadow: 0 0 20px rgba(255, 165, 0, 0.3); */
+}
+
+.wheel {
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(      
+rgb(188, 24, 47) 0deg,  30deg,
+        
+rgb(0, 0, 0) 30deg,60deg,
+        
+rgb(188, 24, 47) 60deg, 90deg,
+        
+rgb(0, 0, 0) 90deg,  120deg,
+        
+rgb(188, 24, 47) 120deg,  150deg,
+        
+rgb(0, 0, 0) 150deg, 180deg,
+        
+rgb(188, 24, 47) 180deg, 210deg,
+        
+rgb(0, 0, 0) 210deg,  240deg,
+        
+rgb(188, 24, 47) 240deg, 270deg,
+        
+rgb(0, 0, 0) 270deg, 300deg,
+        
+rgb(188, 24, 47) 300deg, 330deg,
+        
+rgb(0, 0, 0) 330deg, #000000 360deg
+    );
+    transition: transform 3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transform-origin: center;
+}
+
+.wheel-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at 30% 20%, #ffffff 0, #f2f2f2 35%, #8a8686 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-weight: bold; */
+    font-size: 22px;
+    font-size: 18px;
+    font-family: 'Rubik sans-serif';
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: #1b1c21;;
+    border: 2px solid #f6f3f3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.pointer {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid white;
+    z-index: 10;
+}
+
+.spin-button {
+    background: rgb(188, 24, 47);
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    /* box-shadow: 0 4px 15px rgba(255, 165, 0, 0.5); */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Rubik-600 sans-serif';
+    font-size: 20px;
+}
+
+.spin-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(255, 0, 0, 0.7);
+}
+
+.result {
+    /* margin-top: 15px; */
+    font-size: 16px;
+    color: #ccc;
+}
+.result span {
+    color:rgb(188, 24, 47);
+    letter-spacing: .6px;
+}
+.info {
+    background: #151515;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.tag {
+    background: rgba(255, 0, 0, 0.1);
+    color: rgb(188, 24, 47);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    /* display: inline-block; */
+    margin-bottom: 10px;
+    border: 1px solid rgb(188, 24, 47);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Rubik - 600 sans-serif';
+
+}
+
+p {
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.prizes {
+    background: #121212;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.prizes-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.prizes-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.prize-item {
+    font-size: 18px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.prize-number {
+    font-weight: bold;
+    margin-right: 5px;
+    color:rgb(188, 24, 47);
+}
+
+/* Попап */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #0f0f0f;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 40px rgb(188, 24, 47);
+    animation: popIn 0.5s ease-out;
+}
+.modal-content p {
+    margin-top: 15px;
+    color:#fff;
+}
+
+.modal-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: rgb(188, 24, 47);
+}
+
+.modal-prize {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.close-btn {
+    background: rgb(188, 24, 47);
+    color: #000;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    /* .prizes-list {
+        /* grid-template-columns: 1fr; */
+    /* } */ 
+    .prize-item{
+        font-size: 12px;
+    }
+  .main{
+    padding: 0;
+  }
+    .wheel-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .wheel-center {
+        width: 40px;
+        height: 40px;
+        font-size: 7px;
+    }
+
+    .pointer {
+        top: -7px;
+        border-top: 20px solid white;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+    }
+
+    .spin-button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    
+}
+@media (max-width: 320px) {
+  body{
+    padding: 0;
+  }
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0px 0px 20px 0;
+  }
+  .main{
+    padding: 0;
+  }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
