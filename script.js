@@ -174,7 +174,7 @@ function highAndLow1(numbers){
 }
 console.log(highAndLow1('1 2 3 6 7')); // 7 1
 
-
+w
 function highAndLow(arr){
     // максимальное и минимальное число в масиве
     let max = arr[0]
